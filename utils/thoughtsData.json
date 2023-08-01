@@ -1,0 +1,29 @@
+[
+  {
+    "thoughtText": "I like vegetables",
+    "createdAt": "2/30/2021, 12:00:00 AM",
+    "username": "midnightwafflezz",
+    "reactions": [
+      { "reactionBody": "😝", "username": "diego88" },
+      { "reactionBody": "😅", "username": "mcfly" }
+    ]
+  },
+  {
+    "thoughtText": "What are the plans for tonight?",
+    "createdAt": "5/22/2022, 12:00:00 AM",
+    "username": "diego88",
+    "reactions": [
+      { "reactionBody": "😳", "username": "midnightwafflezz" },
+      { "reactionBody": "😌", "username": "mcfly" }
+    ]
+  },
+  {
+    "thoughtText": "I should finish my homework",
+    "createdAt": "7/30/2023, 12:00:00 AM",
+    "username": "mcfly",
+    "reactions": [
+      { "reactionBody": "😃", "username": "diego88" },
+      { "reactionBody": "😬", "username": "midnightwafflezz" }
+    ]
+  }
+]

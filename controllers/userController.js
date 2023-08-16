@@ -104,4 +104,22 @@ module.exports = {
       res.status(500).json({ error: 'Error while removing user' });
     }
   },
+  async removeFriend(req, res) {
+    try {
+      const filter = { _id: req.params.userId };
+      const update = {
+        friends: req.params.friendId,
+      };
+      const existingUser = await User.findOneAndUpdate(
+        filter,
+        {
+          $pull: { friends: req.params.friendId }, // Remove the friend with the specified ID
+        },
+        { new: true }
+      );
+      res.status(200).json(existingUser);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  },
 };

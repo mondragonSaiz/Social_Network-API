@@ -108,4 +108,23 @@ module.exports = {
       res.status(500).json(err);
     }
   },
+  async deleteReaction(req, res) {
+    try {
+      const filter = { _id: req.params.thoughtId };
+      const update = {
+        reactions: req.body,
+      };
+      const options = { new: true };
+
+      const existingThought = await Thought.findOneAndUpdate(
+        filter,
+        { $pull: { reactions: { _id: req.params.reactionId } } }, // Remove the reaction with the specified _id
+        options
+      );
+
+      res.status(200).json(existingThought);
+    } catch (err) {
+      res.status(500).json({ message: 'Error while updating thought' });
+    }
+  },
 };
